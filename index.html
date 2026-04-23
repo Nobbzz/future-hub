@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Future Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Future Hub 🚀</h1>
+
+    <div class="menu">
+        <button onclick="showSection('student')">Student Hub</button>
+        <button onclick="showSection('services')">Services</button>
+        <button onclick="showSection('social')">Social</button>
+    </div>
+
+    <!-- Student Hub -->
+    <div id="student" class="section">
+        <h2>📚 Student Hub</h2>
+        <textarea placeholder="Share notes..."></textarea>
+        <button>Post</button>
+    </div>
+
+    <!-- Services -->
+    <div id="services" class="section" style="display:none;">
+        <h2>🛠 Local Services</h2>
+        <input placeholder="Search service">
+        <button>Find</button>
+    </div>
+
+    <!-- Social -->
+    <div id="social" class="section" style="display:none;">
+        <h2>💬 Social Feed</h2>
+        <textarea id="postText" placeholder="What's on your mind?"></textarea>
+        <button onclick="addPost()">Post</button>
+
+        <div id="feed"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
