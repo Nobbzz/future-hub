@@ -1,17 +1,17 @@
-function showSection(sectionId) {
-    let sections = document.getElementsByClassName("section");
-    for (let i = 0; i < sections.length; i++) {
-        sections[i].style.display = "none";
-    }
-
-    document.getElementById(sectionId).style.display = "block";
-}
-
 function addPost() {
     let text = document.getElementById("postText").value;
 
+    if (text.trim() === "") return;
+
     let div = document.createElement("div");
+    div.style.background = "#1e293b";
+    div.style.padding = "10px";
+    div.style.marginTop = "10px";
+    div.style.borderRadius = "8px";
+
     div.innerText = text;
 
-    document.getElementById("feed").appendChild(div);
+    document.getElementById("feed").prepend(div);
+
+    document.getElementById("postText").value = "";
 }
